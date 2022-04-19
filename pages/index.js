@@ -24,6 +24,16 @@ import grilli from "../public/blogs/grilli.webp"
 import gaming from "../public/blogs/gaming.webp"
 import Blogs from "../components/Blogs";
 
+
+// Badges
+import drive from "../public/badges/drive.webp"
+import laajat from "../public/badges/laajat.webp"
+import live from "../public/badges/live.webp"
+import palautus from "../public/badges/palautusoikeus.webp"
+import samaHinta from "../public/badges/sama.webp"
+import vaara from "../public/badges/varaa.webp"
+import Badges from "../components/Badges";
+
 export default function Home() {
 
   const productsData = [
@@ -1222,7 +1232,6 @@ export default function Home() {
     }
 
   ]
-
   const blogsData = [
     {
       id: 35252,
@@ -1258,6 +1267,39 @@ export default function Home() {
     },
   ]
 
+  const badgesData = [
+    {
+      id: 32532,
+      image: drive,
+      text: "Gigantti Drive-in"
+    },
+    {
+      id: 35432,
+      image: laajat,
+      text: "Gigantti Laajat asennus"
+    },
+    {
+      id: 31132,
+      image: live,
+      text: "Gigantti Live-myyjä"
+    },
+    {
+      id: 35532,
+      image: palautus,
+      text: "Gigantti Palautusoikeus"
+    },
+    {
+      id: 654532,
+      image: samaHinta,
+      text: "Gigantti Sama hinta"
+    },
+    {
+      id: 432442,
+      image: vaara,
+      text: "Gigantti Vaara & Nouda"
+    },
+  ]
+
   return (
     <Layout>
       <Category />
@@ -1267,6 +1309,7 @@ export default function Home() {
       <Products productsData={outdoorSectionData[0]}/>
       <Blogs blogsData={blogsData}/>
       <Products productsData={appleSectionData[0]}/>
+      <Badges badges={badgesData}/>
 
 
 
