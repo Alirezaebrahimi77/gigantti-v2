@@ -42,8 +42,8 @@ function Products({productsData}) {
 
 
   return (
-    <div style={{backgroundImage: `url(${productsData.backgroundUrl.src})`}} className={`w-full relative bg-cover overflow-hidden py-10`}>
-      <div className="px-6 md:px-12 2xl:px-20 py-6 2xl:py-14 mb-10">
+    <div style={{backgroundImage: `url(${productsData.backgroundUrl.src})`}} className={`w-full relative bg-contain md:bg-cover bg-no-repeat overflow-hidden py-5 md:py-10`}>
+      <div className="px-4 py-2 md:px-12 2xl:px-20 2xl:py-14 mb-2 md:mb-10 flex">
         <h1 style={{color: `${productsData.sectionTitleColor}`}} className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl uppercase md:whitespace-nowrap font-customHeadlineRegular">
           {productsData.sectionTitle}
         </h1>
@@ -52,7 +52,7 @@ function Products({productsData}) {
       <div className="flex flex-col md:flex-row w-full h-full">
         <div className="flex 2xl:w-1/5 xl:w-1/5 lg:w-2/5 md:w-2/5 justify-start md:justify-center items-center 2xl:mr-10">
         <Link href={productsData.buttonLink}>
-          <div className="py-2 px-4 text-md rounded-3xl border-2 border-transparent bg-white text-gary-600 font-semibold hover:border-2 hover:border-black whitespace-nowrap ml-12 2xl:ml-20 mb-3 cursor-pointer">
+          <div className="py-2 px-4 text-md rounded-3xl border-2 border-transparent bg-white text-gary-600 font-semibold hover:border-2 hover:border-black whitespace-nowrap ml-4 md:ml-12 2xl:ml-20 mb-3 cursor-pointer">
             {productsData.buttonText}
             </div>
         </Link>
@@ -80,7 +80,7 @@ export default Products;
 
 const SingleProductItem = ({product}) => {
   return (
-    <div className="relative bg-[#f3f3f3] min-w-[300px] cursor-pointer group overflow-hidden h-[520px] hover:bg-white ">
+    <div className="relative bg-[#f3f3f3] min-w-[300px] cursor-pointer group overflow-hidden h-[520px] xl:hover:bg-white ">
       <p className="opacity-0 group-hover:opacity-100 transition-all duration-75 text-xs text-gray-500 py-1 px-2">
         {product.productNro}
       </p>
@@ -89,12 +89,12 @@ const SingleProductItem = ({product}) => {
 
         {/* Vertaile */}
         <div className="text-gray-600 group">
-          <CompareArrowsIcon className="group-hover:text-blue-300 transition duration-100" />
+          <CompareArrowsIcon className="transition duration-100" />
           <span className="ml-2">Vertaile</span>
         </div>
 
         {/* Image  */}
-        <div className="relative h-[240px] w-[100%] p-10 flex items-center justify-center group-hover:h-[180px] group-hover:w-[100%] group-hover:p-16 transition-all duration-150">
+        <div className="relative h-[240px] w-[100%] p-10 flex items-center justify-center xl:group-hover:h-[180px] xl:group-hover:w-[100%] xl:group-hover:p-16 transition-all duration-150">
           <Image
             src={product.imageSrc}
             alt={product.productTitle}
@@ -122,7 +122,7 @@ const SingleProductItem = ({product}) => {
 
         {/* last part */}
         <div className="flex flex-col h-full justify-end">
-          <div className="relative h-[0px] transition-all duration-150 group-hover:h-[65px] overflow-hidden">
+          <div className="relative h-[0px] transition-all duration-150 xl:group-hover:h-[65px] overflow-hidden">
             {product.description.map(desc => (
                   <div className="flex items-center" key={desc.descId}>
                   <ArrowForwardIosIcon className="mr-2 text-xs text-gray-400" />
