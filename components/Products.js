@@ -80,6 +80,7 @@ export default Products;
 
 const SingleProductItem = ({product}) => {
   return (
+    <Link href={`/product/${product.productNro}`}>
     <div className="relative bg-[#f3f3f3] min-w-[300px] cursor-pointer group overflow-hidden h-[520px] xl:hover:bg-white ">
       <p className="opacity-0 group-hover:opacity-100 transition-all duration-75 text-xs text-gray-500 py-1 px-2">
         {product.productNro}
@@ -182,6 +183,7 @@ const SingleProductItem = ({product}) => {
 
       </div>
     </div>
+    </Link>
   );
 };
 

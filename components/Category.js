@@ -62,7 +62,7 @@ function Category() {
         setShowRightArrow((prevState) => !prevState);
       };
   return (
-    <div className="w-full p-0 m-0 relative overflow-hidden">
+    <div className="w-full p-0 m-0 relative overflow-hidden border border-b-gray-300 mb-6">
     <div
       className="noScrollBar w-full overflow-x-auto flex space-x-24 py-2 px-12 md:py-6 md:space-x-60 scroll-smooth"
       ref={ref}

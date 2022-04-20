@@ -21,7 +21,7 @@ export default Blogs;
 const SingleBlog = ({blog}) => {
   return (
     <Link href="/blogs">
-      <div className="flex flex-col w-full md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-[300px] md:mb-10">
+      <div className="flex flex-col w-full md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-[300px] md:mb-10 cursor-pointer">
           <div className="w-full">
               <Image src={blog.image} alt={"Samsung"} objectFit="contain" className="w-full h-full"/>
           </div>

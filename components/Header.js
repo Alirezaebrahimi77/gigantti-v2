@@ -13,12 +13,12 @@ function Header() {
   return (
     <header>
       {showBar && (
-        <div className="relative w-full h-[40px] bg-giganttiPink flex justify-center items-center">
-          <p className="text-white text-xs md:text-base">
+        <div className="relative w-full h-[40px] bg-giganttiBlue flex justify-center items-center">
+          <p className="text-white text-md md:text-lg">
             Ilmainen toimitus kaikkiin nettitilauksiin! Klikkaa tarjouksiin.
           </p>
           <CloseIcon
-            className="text-white absolute right-2 cursor-pointer bg-giganttiPink"
+            className="text-white absolute right-2 cursor-pointer bg-giganttiBlue"
             onClick={() => setShowBar(!showBar)}
           />
         </div>
@@ -42,33 +42,35 @@ function Header() {
       <div className="flex items-center border border-t-gray-300 border-b-gray-300 h-[72px] xl:h-[100px] xl:pl-6">
         <div className="flex justify-between items-center w-full py-2 px-2 xl:px-6">
           <div className="flex items-center flex-row-reverse xl:flex-row mr-4">
-            <div className="relative w-[120px] h-[70px] md:w-[150px] md:h-[70px] transition duration-150 hover:scale-105 cursor-pointer">
+            <div className="relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] transition duration-150 hover:scale-105 cursor-pointer">
+              <Link href="/">
               <Image
                 src="/gigantti_logo.svg"
                 alt="Gigantti logo"
                 layout="fill"
                 objectFit="contain"
               />
+              </Link>
             </div>
-            <div className="flex px-4 items-center group cursor-pointer">
-              <MenuIcon className="transition duration-150 group-hover:scale-110" />
-              <p className="hidden xl:block pl-2 text-xl font-semibold">
+            <div className="flex px-4 items-center group cursor-pointer text-giganttiBlue 2xl:mr-20 lg:border-l lg:border-gray-300 2xl:ml-4">
+              <MenuIcon className="transition duration-150 group-hover:scale-110 text-2xl" />
+              <p className="hidden xl:block pl-2 text-2xl font-semibold">
                 Valikko
               </p>
             </div>
           </div>
-          <Search className="hidden md:flex" />
+          <Search className="hidden md:flex 2xl:mr-5" />
 
-          <div className="hidden xl:flex items-center group cursor-pointer">
+          <div className="hidden xl:flex items-center group cursor-pointer pr-2 border-r border-gray-300 text-giganttiBlue">
             <LocationOnOutlinedIcon className="text-giganttiGreenIcon transition duration-150 group-hover:scale-110" />
-            <p className="text-giganttiGrayText ml-2 font-semibold text-sm">
+            <p className="ml-2 font-semibold text-sm 2xl:text-md">
               Etsi lähin myymälä
             </p>
           </div>
 
-          <div className="flex items-center group cursor-pointer ml-4">
-            <AccountCircleOutlinedIcon className="text-4xl md:text-2xl text-giganttiGreenIcon transition duration-150 group-hover:scale-110" />
-            <p className="hidden md:block text-giganttiGrayText ml-2 font-semibold text-sm">
+          <div className="flex items-center group cursor-pointer ml-4 text-giganttiBlue">
+            <AccountCircleOutlinedIcon className="text-3xl md:text-2xl text-giganttiGreenIcon transition duration-150 group-hover:scale-110" />
+            <p className="hidden md:block ml-2 font-semibold text-sm 2xl:text-md">
               Kirjaudu
             </p>
           </div>
