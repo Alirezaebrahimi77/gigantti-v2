@@ -10,7 +10,7 @@ function CategoryItem({id, image, title}) {
         <div className="relative h-[40px] w-[40px] md:h-[80px] md:w-[80px]">
           <Image src={image} layout="fill" objectFit="contain" alt={title}/>
         </div>
-        <p className="text-giganttiCategoryText font-semibold text-sm md:text-md md:mt-3 uppercase">
+        <p className="text-giganttiCategoryText font-semibold text-xs md:text-md mt-2 md:mt-3 uppercase">
           {title}
         </p>
       </div>
