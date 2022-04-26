@@ -1,7 +1,8 @@
-import Layout from "../../components/Layout"
+// import Layout from "../../../../components/Layout"
+import Layout from "../../../components/Layout"
 import Head from "next/head"
 import { useRouter } from 'next/router'
-import SingleProductPage from "../../components/SingleProductPage"
+import SingleProductPage from "../../../components/SingleProductPage"
 const ProductPage = () => {
     const router = useRouter()
     return (
