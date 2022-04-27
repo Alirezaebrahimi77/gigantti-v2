@@ -1,0 +1,366 @@
+[
+    {
+        "name": "Irobot Roomba i6 robotti-imuri i6158 (musta)",
+        "price": 295,
+        "normalPrice": 449,
+        "savePrice": 154,
+        "ratings": 4,
+        "numOfReviews": 23,
+        "offerText": "Tarjous voimassa su 24.4 asti",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Käyttöaika jopa 75 minuuttia"
+            },
+            {
+                "desc": "Imprint Smart Mapping -Tek"
+            },
+            {
+                "desc": "iRobot HOME -sovellus"
+            }
+        ],
+        "longDescription": "iRobot Roomba i6 -robotti-imuri suunnistaa itsenäisesti kotonasi. Se osaa myös erottaa keittiön ja olohuoneen toisistaan, joten voit päättää missä ja milloin imuri siivoaa. Voit hallita imuria Amazon Alexa -virtuaaliassistentin avulla.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Asus VivoBook 14 X413 i3/8/256 14'' kannettava",
+        "price": 399,
+        "normalPrice": 449,
+        "savePrice": 50,
+        "ratings": 5,
+        "numOfReviews": 43,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Intel® Core™ i3-1005G1"
+            },
+            {
+                "desc": "14 FHD IPS -näyttö"
+            },
+            {
+                "desc": "8 GB DDR4 RAM, 256 GB SSD"
+            }
+        ],
+        "longDescription": "Asus VivoBook 14 X413 -kannettavassa on suorituskykyinen Intel-prosessori, joka soveltuu joustavaan työskentelyyn, ja sovellusten moniajoon. 19,1 mm runko painaa vain 1,4 kg, jonka ansiosta se kulkee vaivatta mukanasi.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "LG 65 C1 4K OLED älytelevisio (2021)",
+        "price": 1499,
+        "normalPrice": 1699,
+        "savePrice": 200,
+        "ratings": 4.9,
+        "numOfReviews": 65,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "65 Self-lit OLED Smart TV"
+            },
+            {
+                "desc": "α9 Gen4 AI 4K -prosessori"
+            },
+            {
+                "desc": "WebOS, AI ThinQ, Game Optimiser"
+            }
+        ],
+        "longDescription": "65 LG C1 4K OLED -älytelevisio tuo elokuvateatterikokemuksen kotiisi tekoälyteknologioilla tehostetulla kuvanlaadulla, Filmmaker Mode -tilalla sekä selkeällä tilaäänellä, joka korostaa elokuva- ja pelikokemuksia.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Xplora XGO2 lasten kellopuhelin (musta)",
+        "price": 77,
+        "normalPrice": 139,
+        "savePrice": 62,
+        "ratings": 4.7,
+        "numOfReviews": 25,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "1,4 kosketusnäyttö, 0,3 Mpx kamera"
+            },
+            {
+                "desc": "IP67-luokitus, kestää 3 päivää lepotilassa"
+            },
+            {
+                "desc": "SOS-nappi, paikannuspalvelut"
+            }
+        ],
+        "longDescription": "Lapsille suunniteltu Xplora XGO2 -kellopuhelin sisältää integroituja G Sensor -antureita, joiden avulla se seuraa lasten askeleita tarkasti ja palkitsee kuntoilun virtuaalisilla pisteillä. Se tarjoaa lisäksi GPS-seurannan, wifi-yhteyden ja kameran.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Acer Aspire Vero i5/8/512 15.6 kannettava",
+        "price": 549,
+        "normalPrice": 749,
+        "savePrice": 200,
+        "ratings": 4.7,
+        "numOfReviews": 55,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Intel® Core™ i7-1195G7 prosessori"
+            },
+            {
+                "desc": "15,6 Full HD IPS -näyttö"
+            },
+            {
+                "desc": "16 GB DDR4 RAM, 512 GB SSD"
+            }
+        ],
+        "longDescription": "15,6 Acer Aspire Vero -kannettavan rungosta 30 % on PCR-muovia, ja sen pakkaus on 100 % kierrätettävä. VeroSense-ohjelmisto mahdollistaa tehokkaan toiminnan. 11. sukupolven Intel®-prosessori ja Iris® Xe -grafiikkasiru takaavat mainion suorituskyvyn.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Braun Silk-expert PRO 3 valoimpulssilaite PL3132",
+        "price": 179,
+        "normalPrice": 349,
+        "savePrice": 200,
+        "ratings": 5,
+        "numOfReviews": 15,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "IPL-teknologia"
+            },
+            {
+                "desc": "SensoAdapt-sensori"
+            },
+            {
+                "desc": "Voidaan käyttää myös kasvoihin"
+            }
+        ],
+        "longDescription": "Hankkiudu eroon ei-toivotuista ihokarvoista tehokkaasti ja pitkäkestoisesti Braun Silk-expert PRO 3 -valoimpulssilaitteen avulla. Älykäs SensoAdapt-sensori ja liukutila auttavat suojaamaan ihoa.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Electrolux SilentPerformer pölynimuri ESP74DB",
+        "price": 89.95,
+        "normalPrice": 199,
+        "savePrice": 109.05,
+        "ratings": 4.5,
+        "numOfReviews": 46,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Työskentelysäde: 12 m"
+            },
+            {
+                "desc": "HEPA 12 -suodatin"
+            },
+            {
+                "desc": "3-in-1-suulake"
+            }
+        ],
+        "longDescription": "Imuroiminen on vaivatonta Electrolux SilentPerformer -pölynimurilla, jossa on 12 m toimintasäde, erinomainen teho, HEPA 12 -suodatin ja käteviä lisätarvikkeita.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "iRobot Roomba i4+ robotti-imuri 43371515",
+        "price": 349,
+        "normalPrice": 749,
+        "savePrice": 400,
+        "ratings": 4.3,
+        "numOfReviews": 124,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Jopa 90 minuutin käyttöaika"
+            },
+            {
+                "desc": "Lian havaitseva teknologia"
+            },
+            {
+                "desc": "Älysovellus, puheohjaus"
+            }
+        ],
+        "longDescription": "iRobot Roomba i4+ -robotti-imuri etenee järjestelmällisesti. Puhdistaa pölyn, lian, roskat ja lemmikkien karvat nopeasti ja tarkasti. Siinä on älykkäät sensorit, lian havaitseva teknologia, sekä yhteensopivuus puheavustajille.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "Siemens EQ.500 kahvikone TQ507RX3",
+        "price": 1499,
+        "normalPrice": 1699,
+        "savePrice": 200,
+        "ratings": 4.8,
+        "numOfReviews": 454,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "Täysin automaattinen, maitosäiliö"
+            },
+            {
+                "desc": "Double Cup -toiminto"
+            },
+            {
+                "desc": "AutoMilk-puhdistus, värinäyttö"
+            }
+        ],
+        "longDescription": "Siemens EQ.500 Integral -kahvikone täyttää niin espresson kuin maitokahvinkin ystävän toiveet. Keitä lempikahvisi helposti yhdellä kosketusnäytön painalluksella.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "OnePlus 9 5G älypuhelin 8/128GB (Astral Black)",
+        "price": 444,
+        "normalPrice": 699,
+        "savePrice": 255,
+        "ratings": 4.9,
+        "numOfReviews": 34,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "6,55” 120Hz Fluid AMOLED -näyttö"
+            },
+            {
+                "desc": "48+50+2 Mpx Hasselblad-kamera"
+            },
+            {
+                "desc": "Snapdragon 888 -prosessori 5G-tuella"
+            }
+        ],
+        "longDescription": "OnePlus 9 -älypuhelimessa on 48+50+2 megapikselin Hasselblad-kamera sekä 120 Hz virkistystaajuudella toimiva 6,55” Fluid AMOLED -kosketusnäyttö. Snapdragon 888 -prosessori tarjoaa äärimmäistä suorituskykyä sekä tuen 5G-verkoille.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      },
+      {
+        "name": "LG 77 B1 4K OLED älytelevisio (2021)",
+        "price": 1999,
+        "normalPrice": 2399,
+        "savePrice": 400,
+        "ratings": 4.9,
+        "numOfReviews": 324,
+        "offerText": "Esittelytuote / asiakaspalautus alk. 509€",
+        "offerDetails": "Saatavilla verkkokaupasta (100+) kpl",
+        "shortDescription":[
+            {
+                "desc": "77 Self-lit OLED Smart TV"
+            },
+            {
+                "desc": "α7 Gen4 AI 4K -prosessori"
+            },
+            {
+                "desc": "WebOS, ThinQ AI, Game Optimiser"
+            }
+        ],
+        "longDescription": "77 LG B1 4K OLED -älytelevisio vie sinut itsevalaisevien pikselien maailmaan loputtoman kontrastin ja erinomaisen väritarkkuuden kanssa. Tekoälytehostettu prosessori tarjoaa uskomattoman kuvanlaadun sekä mukautuvan äänen.",
+        "images": [
+          {
+            "public_id": "bookit/rooms/1_bzynlv",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590762/bookit/rooms/1_bzynlv.jpg"
+          },
+          {
+            "public_id": "bookit/rooms/2_s1u52n",
+            "url": "https://res.cloudinary.com/bookit/image/upload/v1618590761/bookit/rooms/2_s1u52n.jpg"
+          }
+        ],
+        "category": "Discount"
+      }
+
+]

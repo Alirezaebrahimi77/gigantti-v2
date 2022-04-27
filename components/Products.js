@@ -7,7 +7,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
-function Products({productsData}) {
+import iRobot from "../public/products/irobot.png";
+function Products({productsData, products}) {
   const productsRef = useRef();
   const [showRightArrow, setShowRightArrow] = useState(true);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -59,8 +60,8 @@ function Products({productsData}) {
         </div>
         <div className="flex relative w-full h-full flex-1 mt-5 border-2 overflow-hidden z-10">
           <div className="flex scroll-smooth noScrollBar overflow-x-auto" ref={productsRef}>
-            {productsData.products.map(product => (
-              <SingleProductItem key={product.productNro} product={product}/>
+            {products?.map(product => (
+              <SingleProductItem key={product._id} product={product}/>
             ))}
 
           </div>
@@ -80,7 +81,7 @@ export default Products;
 
 const SingleProductItem = ({product}) => {
   return (
-    <Link href={`/product/${product.productNro}`}>
+    <Link href={`/product/${product._id}`}>
     <div className="relative bg-[#f3f3f3] min-w-[300px] cursor-pointer group overflow-hidden h-[520px] xl:hover:bg-white ">
       <p className="opacity-0 group-hover:opacity-100 transition-all duration-75 text-xs text-gray-500 py-1 px-2">
         {product.productNro}
@@ -97,8 +98,8 @@ const SingleProductItem = ({product}) => {
         {/* Image  */}
         <div className="relative h-[240px] w-[100%] p-10 flex items-center justify-center xl:group-hover:h-[180px] xl:group-hover:w-[100%] xl:group-hover:p-16 transition-all duration-150">
           <Image
-            src={product.imageSrc}
-            alt={product.productTitle}
+            src={iRobot}
+            alt={product.name}
             objectFit="contain"
             className="object-contain w-full h-full"
           />
@@ -108,13 +109,13 @@ const SingleProductItem = ({product}) => {
         {/* Title */}
         <div>
           <p className="font-extrabold text-sm md:text-md text-gray-900 font-customOpenSans">
-          {product.productTitle}
+          {product.name}
           </p>
         </div>
 
         {/* Rating */}
         <div className="flex items-center py-2 font-customOpenSans font-normal">
-          <Rating rating={product.rating} size={15} />
+          <Rating rating={product.ratings} size={15} />
           <span className="inline text-xs text-gray-400 ml-2">
             ({product.numOfReviews} Arvostelua)
           </span>
@@ -124,8 +125,8 @@ const SingleProductItem = ({product}) => {
         {/* last part */}
         <div className="flex flex-col h-full justify-end">
           <div className="relative h-[0px] transition-all duration-150 xl:group-hover:h-[65px] overflow-hidden">
-            {product.description.map(desc => (
-                  <div className="flex items-center" key={desc.descId}>
+            {product.shortDescription.map(desc => (
+                  <div className="flex items-center" key={desc._id}>
                   <ArrowForwardIosIcon className="mr-2 text-xs text-gray-400" />
                   <p className="inline text-sm text-gray-600">
                     {desc.desc}
@@ -134,18 +135,6 @@ const SingleProductItem = ({product}) => {
 
             ))}
 
-            {/* <div className="flex items-center">
-              <ArrowForwardIosIcon className="mr-2 text-xs text-gray-400" />
-              <p className="inline text-sm text-gray-600">
-                Imprint Smart Mapping -Tek
-              </p>
-            </div>
-            <div className="flex items-center">
-              <ArrowForwardIosIcon className="mr-2 text-xs text-gray-400" />
-              <p className="inline text-sm text-gray-900">
-                iRobot HOME -sovellus
-              </p>
-            </div> */}
           </div>
 
           <div className="flex flex-col pb-10">

@@ -8,7 +8,7 @@ import bosch from "../public/singleProduct/bosch.webp"
 import bosch1 from "../public/singleProduct/bosch1.jpg"
 import bosch2 from "../public/singleProduct/bosch2.webp"
 import Image from "next/image"
-function SingleProductPage({req}) {
+function SingleProductPage({req, product}) {
   const [orderType, setOrderType] = useState("net");
   const router = useRouter()
 
@@ -18,7 +18,6 @@ function SingleProductPage({req}) {
 
   const handleCart = () => {
     router.push(`${origin + router.asPath}/extra`)
-    console.log(req)
   }
 
   return (
@@ -27,22 +26,22 @@ function SingleProductPage({req}) {
         {/* product Title and reviews*/}
         <div className="w-full border-b border-gray-100 pb-5 mb-5">
           <h1 className="text-xl md:text-2xl 2xl:text-3xl font-bold mb-2">
-            Philips kahvikone EP2222010
+            {product?.name}
           </h1>
 
           <div className="flex items-center justify-between">
             <div className="flex flex-col md:flex-row">
               <div className="flex items-center">
                 <p className="text-sm text-black">Tuotenumero:</p>
-                <span className="text-sm text-gray-400 ml-1">324666</span>
+                <span className="text-sm text-gray-400 ml-1">{product?.productNro}</span>
               </div>
               <div className="flex items-center mt-2 md:mt-0 md:ml-3">
                 <div className="flex">
-                  <Rating rating={4} size={15} />
-                  <span className="text-sm font-bold ml-1">4.8</span>
+                  <Rating rating={product?.ratings} size={15} />
+                  <span className="text-sm font-bold ml-1">{product?.ratings}</span>
                 </div>
                 <p className="text-gray-400 ml-2 underline hover:no-underline cursor-pointer">
-                  (4 Arvostelua)
+                  ({product?.numOfReviews} Arvostelua)
                 </p>
               </div>
             </div>
@@ -80,15 +79,13 @@ function SingleProductPage({req}) {
 
 
             {/* Price section */}
-          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} className="w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 flex md:hidden mb-10"/>
+          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} price={product?.price} normalPrice={product?.normalPrice} savePrice={product?.savePrice} className="w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 flex md:hidden mb-10"/>
             {/* Short description */}
             <div className="flex w-full h-[30%] flex-col md:flex-row">
               <div className="flex flex-col w-full md:w-1/2 2xl:w-[80%] pr-12 mb-6 md:mb-0">
                 <h3 className="text-2xl font-bold">Tuotteen perustiedot</h3>
                 <p className="text-md my-10">
-                  Bosch Serie 6 -pölynimurissa on pestävä HEPA 13 -suodatin,
-                  tilava pölypussi ja tarkka imutehon säätö, jonka ansiosta
-                  imuroit vaivatta kaikenlaiset pinnat.
+                  {product?.longDescription}
                 </p>
 
                 
@@ -102,17 +99,13 @@ function SingleProductPage({req}) {
                   Tuotteen perustiedot
                 </h3>
                 <div className="flex flex-col items-start py-6 space-y-2">
-                  <p className="text-md pb-2 border-b border-gray-200 inline-block">
-                    12 m kantama
-                  </p>
-                  <p className="text-md pb-2 border-b border-gray-200 inline-block">
-                    Pestävä HEPA 13 -suodatin
-                  </p>
-                  <p className="text-md pb-2 border-b border-gray-200 inline-block">
-                    10 vuoden moottoritakuu
-                  </p>
-                </div>
+                  {product?.shortDescription?.map(desc => (
+                      <p key={desc._id} className="text-md pb-2 border-b border-gray-200 inline-block">
+                      {desc.desc}
+                      </p>
 
+                  ))}
+                </div>
                 <Link href="/product/:id">
                   <p className="underline cursor-pointer text-gray-700 hover:no-underline">
                     Katso tekniset tiedot
@@ -123,7 +116,7 @@ function SingleProductPage({req}) {
           </div>
 
           {/* Price section */}
-          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} className="sticky top-10 w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 hidden md:flex"/>
+          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} price={product?.price} normalPrice={product?.normalPrice} savePrice={product?.savePrice} className="sticky top-10 w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 hidden md:flex"/>
 
         </div>
       </div>
@@ -134,19 +127,19 @@ function SingleProductPage({req}) {
 export default SingleProductPage;
 
 
-const PriceComponent = ({orderType, setOrderType, handleCart, ...className}) => {
+const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice, savePrice, ...className}) => {
     return(
         <div {...className}>
         <div className="w-full flex flex-col">
           <div className="flex max-w-1/2 items-center p-10">
             <div className="text-5xl text-black font-customHeadlineRegular justify-center items-center mr-2">
-              249€
+              {price}€
             </div>
             <div className="flex flex-col text-sm">
               <p className=" p-[2px] bg-yellow-400 text-black font-bold uppercase">
-                Säästä 200
+                Säästä {` ${savePrice}`}
               </p>
-              <p className="text-gray-400">Norm 449€</p>
+              <p className="text-gray-400">Norm {normalPrice}€</p>
             </div>
           </div>
 
