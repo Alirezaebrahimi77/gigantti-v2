@@ -1,0 +1,9 @@
+export const ADD_TO_CART_SUCCESS = "ADD_TO_CART_SUCCESS";
+export const ADD_TO_CART_FAIL = "ADD_TO_CART_FAIL";
+export const LOAD_CART_PRODUCTS = "LOAD_CART_PRODUCTS";
+
+
+export const ALL_PRODUCTS_FAIL = "ALL_PRODUCTS_FAIL";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+

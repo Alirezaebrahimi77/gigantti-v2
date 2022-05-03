@@ -8,6 +8,8 @@ import bosch from "../public/singleProduct/bosch.webp"
 import bosch1 from "../public/singleProduct/bosch1.jpg"
 import bosch2 from "../public/singleProduct/bosch2.webp"
 import Image from "next/image"
+import {addToCart} from "../redux/actions/cartActions"
+import { useDispatch } from "react-redux";
 function SingleProductPage({req, product}) {
   const [orderType, setOrderType] = useState("net");
   const router = useRouter()
@@ -15,8 +17,11 @@ function SingleProductPage({req, product}) {
   useEffect(() => {
       const { origin } = absoluteUrl(req)
   },[])
+  const dispatch = useDispatch()
 
-  const handleCart = () => {
+  const handleCart = (id) => {
+    dispatch(addToCart(id))
+    console.log("on click" + id)
     router.push(`${origin + router.asPath}/extra`)
   }
 
@@ -116,7 +121,7 @@ function SingleProductPage({req, product}) {
           </div>
 
           {/* Price section */}
-          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} price={product?.price} normalPrice={product?.normalPrice} savePrice={product?.savePrice} className="sticky top-10 w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 hidden md:flex"/>
+          <PriceComponent handleCart={handleCart} orderType={orderType} setOrderType={setOrderType} product_id={product?._id} price={product?.price} normalPrice={product?.normalPrice} savePrice={product?.savePrice} className="sticky top-10 w-full md:w-[40%] 2xl:w-[20%] h-[500px] bg-[#f5f5f5] border border-gray-100 hidden md:flex"/>
 
         </div>
       </div>
@@ -127,7 +132,7 @@ function SingleProductPage({req, product}) {
 export default SingleProductPage;
 
 
-const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice, savePrice, ...className}) => {
+const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice, savePrice, product_id, ...className}) => {
     return(
         <div {...className}>
         <div className="w-full flex flex-col">
@@ -180,7 +185,7 @@ const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice
                 </p>
               </div>
               <div className="flex justify-center items-center mt-10">
-                <button  onClick={handleCart} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
+                <button  onClick={() => handleCart(product_id)} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
                   Lisää ostoskoriin
                 </button>
               </div>
@@ -204,7 +209,7 @@ const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice
                   <span className="ml-1 text-sm"> 1.5 km päässä</span>
                 </div>
 
-                <button  onClick={handleCart} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
+                <button  onClick={() => handleCart(product_id)} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
                   Lisää ostoskoriin
                 </button>
               </div>

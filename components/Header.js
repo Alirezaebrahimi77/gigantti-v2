@@ -8,8 +8,10 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import Search from "./Search";
+import {useSelector} from "react-redux"
 function Header() {
   const [showBar, setShowBar] = useState(true);
+  const {cartItems} = useSelector(state => state.cart)
   return (
     <header>
       {showBar && (
@@ -79,7 +81,11 @@ function Header() {
         <div
           className={`relative w-[110px] h-[72px] xl:h-[100px] cart after:border-t-[36px] after:border-t-transparent after:border-b-[36px] after:border-b-transparent xl:after:border-t-[50px] xl:after:border-t-transparent xl:after:border-b-[50px] xl:after:border-b-transparent`}
         >
+          <div className="relative">
+
           <ShoppingCartOutlinedIcon className="text-white text-md ml-6 cursor-pointer transition duration-150 hover:scale-110" />
+          <span className="absolute -top-4 -right-2 text-white font-bold text-md font-customOpenSans">{cartItems && cartItems.length}</span>
+          </div>
           
         </div>
       </div>

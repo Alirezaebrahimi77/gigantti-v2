@@ -36,10 +36,12 @@ import Badges from "../components/Badges";
 
 // get products 
 import {getProducts} from "../redux/actions/productActions"
-import {wrapper} from "../redux/store"
-import { useSelector } from "react-redux";
+import {wrapper, store} from "../redux/store"
+import { useDispatch, useSelector } from "react-redux";
 
-export default function Home() {
+
+
+export default function Home({users, cookie}) {
   const { products } = useSelector(state => state.allProducts)
 
   const productsData = [
@@ -160,8 +162,6 @@ export default function Home() {
       <Blogs blogsData={blogsData} />
       <Products productsData={appleSectionData[0]} products={products}/>
       <Badges badges={badgesData}/>
-
-
 
     </Layout>
   );

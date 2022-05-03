@@ -12,7 +12,7 @@ const ProductPage = () => {
     return (
         <Layout>
             <Head>
-                <title>Product page {router.query.id}</title>
+                <title>{product?.name}</title>
             </Head>
                 <SingleProductPage product={product}/>
 
