@@ -7,3 +7,6 @@ export const ALL_PRODUCTS_FAIL = "ALL_PRODUCTS_FAIL";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 
+
+export const INCREMENT_QTY = "INCREMENT_QTY";
+export const DECREMENT_QTY = "DECREMENT_QTY";

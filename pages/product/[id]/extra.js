@@ -6,15 +6,17 @@ import SingleProductPage from "../../../components/SingleProductPage"
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import MoreServices from "../../../components/cart/MoreServices";
 import Cart from "../../../components/cart/Cart";
+import { useSelector } from "react-redux";
 const Extra = () => {
     const router = useRouter()
     const backHandler = () => {
       router.back()
     }
+    const { product } = useSelector(state => state.productDetails)
     return (
         <Layout>
             <Head>
-                <title>Extra page {router.query.id}</title>
+                <title>{product.name}</title>
             </Head>
 
             <div className="w-full ">
@@ -36,19 +38,9 @@ const Extra = () => {
                   <Cart />
 
                 </div>
-
-
-
-
-
               </div>
-              
             </div>
              
-
-            
-
-
         </Layout>
     )
 }

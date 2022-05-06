@@ -13,18 +13,17 @@ import { useDispatch } from "react-redux";
 function SingleProductPage({req, product}) {
   const [orderType, setOrderType] = useState("net");
   const router = useRouter()
+  const dispatch = useDispatch()
 
   useEffect(() => {
       const { origin } = absoluteUrl(req)
+
   },[])
-  const dispatch = useDispatch()
 
   const handleCart = (id) => {
     dispatch(addToCart(id))
-    console.log("on click" + id)
     router.push(`${origin + router.asPath}/extra`)
   }
-
   return (
     <div className="w-full">
       <div className="w-full max-w-[90%] m-auto py-10">
@@ -185,7 +184,7 @@ const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice
                 </p>
               </div>
               <div className="flex justify-center items-center mt-10">
-                <button  onClick={() => handleCart(product_id)} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
+                <button  onClick={() => handleCart(product_id)} className="w-72 py-3 text-white font-bold text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
                   Lisää ostoskoriin
                 </button>
               </div>
@@ -209,7 +208,7 @@ const PriceComponent = ({orderType, setOrderType, handleCart, price, normalPrice
                   <span className="ml-1 text-sm"> 1.5 km päässä</span>
                 </div>
 
-                <button  onClick={() => handleCart(product_id)} className="py-3 px-20 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
+                <button  onClick={() => handleCart(product_id)} className="w-72 py-3 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
                   Lisää ostoskoriin
                 </button>
               </div>

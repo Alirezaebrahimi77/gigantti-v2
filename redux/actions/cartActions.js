@@ -1,19 +1,19 @@
 import axios from "axios";
-import { ADD_TO_CART_SUCCESS, ADD_TO_CART_FAIL, LOAD_CART_PRODUCTS } from "../constants/cartConstants";
-
-export const addToCart = (id, quantity = 1) => async (dispatch) => {
+import { ADD_TO_CART_SUCCESS, ADD_TO_CART_FAIL, LOAD_CART_PRODUCTS, INCREMENT_SUCCESS, INCREMENT_FAIL, INCREMENT_QTY, DECREMENT_QTY } from "../constants/cartConstants";
+// import {absoluteUrl} from "next-absolute-url"
+export const addToCart = (id, origin) => async (dispatch) => {
     try{
         // const {origin} = absoluteUrl(req)
         const {data} = await axios.get(`http://localhost:3000/api/products/${id}`)
         dispatch({
             type: ADD_TO_CART_SUCCESS,
             payload:{
-                id: data._id,
-                name: data.name,
-                normalPrice: data.normalPrice,
-                price: data.price,
-                images: data.images,
-                quantity
+                id: data.product._id,
+                name: data.product.name,
+                normalPrice: data.product.normalPrice,
+                price: data.product.price,
+                images: data.product.images,
+                quantity: 1
             }
         })
     
@@ -42,3 +42,24 @@ export const loadCart = (products) => async (dispatch) => {
     }
 
 } 
+
+export const incrementQty = (id) => async(dispatch) => {
+
+        dispatch({
+            type: INCREMENT_QTY,
+            payload: {
+                id
+            }
+        })
+
+}
+export const decrementQty = (id) => async(dispatch) => {
+
+    dispatch({
+        type: DECREMENT_QTY,
+        payload: {
+            id
+        }
+    })
+
+}

@@ -1,19 +1,28 @@
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import Search from "./Search";
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux";
+import Cart from "./cart/Cart";
+import SingleCartItem from "./cart/SingleCartItem";
 function Header() {
   const [showBar, setShowBar] = useState(true);
-  const {cartItems} = useSelector(state => state.cart)
+  const [showCart, setShowCart] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
+
+  const cartHandler = () => {
+    setShowCart((prevState) => !prevState);
+    document.body.style.overflow = "hidden";
+  };
+
   return (
-    <header>
+    <header className="overflow-hidden w-full">
       {showBar && (
         <div className="relative w-full h-[40px] bg-giganttiBlue flex justify-center items-center">
           <p className="text-white text-md md:text-lg">
@@ -33,7 +42,9 @@ function Header() {
           </p>
         </Link>
         <Link href="/yksityisasiakas">
-          <p className="text-giganttiCategoryText cursor-pointer">Yksityisasiakas</p>
+          <p className="text-giganttiCategoryText cursor-pointer">
+            Yksityisasiakas
+          </p>
         </Link>
         <Link href="yritysasiakas">
           <p className="text-gray-400 cursor-pointer hover:underline">
@@ -46,12 +57,12 @@ function Header() {
           <div className="flex items-center flex-row-reverse xl:flex-row mr-4">
             <div className="relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] transition duration-150 hover:scale-105 cursor-pointer">
               <Link href="/">
-              <Image
-                src="/gigantti_logo.svg"
-                alt="Gigantti logo"
-                layout="fill"
-                objectFit="contain"
-              />
+                <Image
+                  src="/gigantti_logo.svg"
+                  alt="Gigantti logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
               </Link>
             </div>
             <div className="flex px-4 items-center group cursor-pointer text-giganttiBlue 2xl:mr-20 lg:border-l lg:border-gray-300 2xl:ml-4">
@@ -82,15 +93,99 @@ function Header() {
           className={`relative w-[110px] h-[72px] xl:h-[100px] cart after:border-t-[36px] after:border-t-transparent after:border-b-[36px] after:border-b-transparent xl:after:border-t-[50px] xl:after:border-t-transparent xl:after:border-b-[50px] xl:after:border-b-transparent`}
         >
           <div className="relative">
-
-          <ShoppingCartOutlinedIcon className="text-white text-md ml-6 cursor-pointer transition duration-150 hover:scale-110" />
-          <span className="absolute -top-4 -right-2 text-white font-bold text-md font-customOpenSans">{cartItems && cartItems.length}</span>
+            <ShoppingCartOutlinedIcon
+              onClick={cartHandler}
+              className="text-white text-md ml-6 cursor-pointer transition duration-150 hover:scale-110"
+            />
+            <span className="absolute -top-4 -right-2 text-white font-bold text-md font-customOpenSans">
+              {cartItems &&
+                cartItems.reduce((acc, item) => acc + Number(item.quantity), 0)}
+            </span>
           </div>
-          
         </div>
       </div>
       <div className="py-3 px-5 md:hidden">
-          <Search />
+        <Search />
+      </div>
+
+      {/* CartSlider */}
+      <div
+        className={`w-full h-full absolute top-0 right-0 z-50 translate-x-full ${
+          showCart && "translate-x-0 cartSliderBg"
+        } transition duration-50 flex justify-end`}
+      >
+        <div className="w-full md:w-[50%] lg:w-[40%] xl:w-[28%] shadow-xl bg-white tansition duration-500 py-10 px-8 flex flex-col">
+          <div className="flex justify-between border-b border-gray-200 pb-10">
+            <div>
+              {cartItems.length > 0 ? (
+                <React.Fragment>
+                  <h3 className="text-[1.8rem] font-bold">
+                    Ostoskorissasi on (
+                    {cartItems.reduce(
+                      (acc, item) => acc + Number(item.quantity),
+                      0
+                    )}{" "}
+                    tuotetta)
+                  </h3>
+                  <p className="text-md text-gray-500">ID: 1005753555</p>
+                </React.Fragment>
+              ) : (
+                <h3 className="text-[1.8rem] font-bold">
+                  Ostoskorisi on tyhjä.
+                </h3>
+              )}
+            </div>
+            <CloseRoundedIcon
+              className="text-3xl text-gray-500 mt-1 cursor-pointer"
+              onClick={() => setShowCart(false)}
+            />
+          </div>
+
+          {cartItems.length > 0 ? (
+            <React.Fragment>
+              <div className="flex flex-1 overflow-y-scroll noScrollBar flex-col">
+                {cartItems.map((cartItem) => (
+                  <SingleCartItem key={cartItem.id} cartItem={cartItem} />
+                ))}
+              </div>
+              <div className="w-full">
+                <div className="flex justify-between items-center py-10 px-2 text-2xl">
+                  <p className="font-semibold">Summa EUR</p>
+                  <p className="font-customHeadlineRegular text-5xl">
+                    {cartItems.reduce(
+                      (acc, item) => acc + item.quantity * item.price,
+                      0
+                    )}
+                    €
+                  </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <button className="w-72 py-3 text-white font-bold text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
+                    Lisää ostoskoriin
+                  </button>
+                </div>
+              </div>
+            </React.Fragment>
+          ) : (
+            <div>
+              <div className="py-12 text-center font-customBodyTextRegular text-lg border-b-2 border-black">
+                <p>Aloita täyttämällä ostoskorisi</p>
+                <p>valitsemillasi tuotteilla.</p>
+              </div>
+              <div className="py-12 text-center font-customBodyTextRegular text-2xl font-bold">
+                <p>Tarvitsetko inspiraatiota</p>
+                <p>oikean tuotteen</p>
+                <p>löytämiseen?</p>
+              </div>
+              <button className="w-full rounded-2xl bg-[#6aa334] flex justify-center items-center text-white py-3 text-lg mb-6">
+                Tutustu tämän viikon tarjouksiin
+              </button>
+              <button className="w-full rounded-2xl bg-white flex justify-center items-center text-[#6aa334] py-3 text-lg border border-[#6aa334]">
+                Jtaka ostosten tekemistä
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

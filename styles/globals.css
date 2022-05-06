@@ -1,56 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face{
-    font-family: 'headlineRegular';
-    src: local('headlineRegular'), url(../fonts/ElkjopHeadline-Regular.woff2) format('woff2');
+@font-face {
+  font-family: "headlineRegular";
+  src: local("headlineRegular"),
+    url(../fonts/ElkjopHeadline-Regular.woff2) format("woff2");
 }
 @font-face {
-    font-family: 'bodyTextRegular';
-    src: local('bodyTextRegular'), url(../fonts/ElkjopBodytext-Regular.woff2) format('woff2');
+  font-family: "bodyTextRegular";
+  src: local("bodyTextRegular"),
+    url(../fonts/ElkjopBodytext-Regular.woff2) format("woff2");
 }
-@font-face{
-    font-family: 'bodyTextDemiBold';
-    src: local('bodyTextDemiBold'), url(../fonts/ElkjopBodytext-DemiBold.woff2) format('woff2');
-}
-
-@font-face{
-    font-family: 'openSansRegular';
-    src: local('openSansRegular'), url(../fonts/open-sans-regular.woff2) format('woff2');
-}
-@font-face{
-    font-family: 'openSans';
-    src: local('openSans'), url(../fonts/open-sans-600.woff2) format('woff2');
+@font-face {
+  font-family: "bodyTextDemiBold";
+  src: local("bodyTextDemiBold"),
+    url(../fonts/ElkjopBodytext-DemiBold.woff2) format("woff2");
 }
 
-@font-face{
-    font-family: 'hotjar';
-    src: local('hotjar'), url(../fonts/font-hotjar_5.65042d.woff2) format('woff2');
+@font-face {
+  font-family: "openSansRegular";
+  src: local("openSansRegular"),
+    url(../fonts/open-sans-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "openSans";
+  src: local("openSans"), url(../fonts/open-sans-600.woff2) format("woff2");
 }
 
+@font-face {
+  font-family: "hotjar";
+  src: local("hotjar"), url(../fonts/font-hotjar_5.65042d.woff2) format("woff2");
+}
 
 @layer components {
-    .cart {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgb(113,182,66);
-        background: linear-gradient(90deg, rgba(113,182,66,1) 42%, rgba(57,149,71,1) 100%);
-    }
-    .cart::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 30px solid white;
-
-    }
-    .noScrollBar::-webkit-scrollbar{
-        display: none;
-    }
-    /* .itemFeatures{
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(113, 182, 66);
+    background: linear-gradient(
+      90deg,
+      rgba(113, 182, 66, 1) 42%,
+      rgba(57, 149, 71, 1) 100%
+    );
+  }
+  .cart::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid white;
+  }
+  .noScrollBar::-webkit-scrollbar {
+    display: none
+  }
+  .cartSliderBg{
+    background-color: rgba(0,0,0,0.15)
+  }
+  /* .itemFeatures{
         height: 0px;
         overflow: hidden;
         -webkit-transition: height 0.8s;
@@ -61,13 +70,15 @@
         height: 60px;
 
     } */
-    
-  }
+}
 
-
-html,body{
-    font-family: bodyTextRegular;
-    cursor: default;
+html,
+body {
+  font-family: bodyTextRegular;
+  cursor: default;
+}
+html{
+  overflow-x: hidden;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -77,7 +88,16 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
