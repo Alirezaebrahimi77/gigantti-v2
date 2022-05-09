@@ -81,6 +81,7 @@ function SingleProductPage({ req, product }) {
               handleCart={handleCart}
               orderType={orderType}
               setOrderType={setOrderType}
+              product_id={product?._id}
               price={product?.price}
               normalPrice={product?.normalPrice}
               savePrice={product?.savePrice}
