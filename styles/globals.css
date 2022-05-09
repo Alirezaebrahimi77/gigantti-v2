@@ -59,6 +59,9 @@
   .cartSliderBg{
     background-color: rgba(0,0,0,0.15)
   }
+  .footerMenu{
+    transform: translateY(-100%);
+  }
   /* .itemFeatures{
         height: 0px;
         overflow: hidden;
@@ -77,9 +80,7 @@ body {
   font-family: bodyTextRegular;
   cursor: default;
 }
-html{
-  overflow-x: hidden;
-}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

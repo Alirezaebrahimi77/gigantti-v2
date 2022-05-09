@@ -14,7 +14,8 @@ module.exports = {
         giganttiCartBg: "rgb(113,182,66)",
         giganttiCartBgGradient: "linear-gradient(90deg, rgba(113,182,66,1) 39%, rgba(57,149,71,1) 100%)",
         giganttiCategoryText: "#11155C",
-        giganttiBlue: "#11155C"
+        giganttiBlue: "#11155C",
+        giganttiFooterBlue: "#11155C"
       },
       fontFamily: {
         customOpenSans: ['openSans'],
