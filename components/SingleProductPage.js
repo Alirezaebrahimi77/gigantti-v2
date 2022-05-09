@@ -22,7 +22,6 @@ function SingleProductPage({ req, product }) {
 
   const handleCart = (id) => {
     dispatch(addToCart(id));
-    console.log(id)
     router.push(`${origin + router.asPath}/extra`);
   };
 
