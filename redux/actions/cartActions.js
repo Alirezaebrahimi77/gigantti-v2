@@ -4,7 +4,7 @@ import { ADD_TO_CART_SUCCESS, ADD_TO_CART_FAIL, LOAD_CART_PRODUCTS, INCREMENT_SU
 export const addToCart = (id, origin) => async (dispatch) => {
     try{
         // const {origin} = absoluteUrl(req)
-        const {data} = await axios.get(`http://localhost:3000/api/products/${id}`)
+        const {data} = await axios.get(`https://gigantti-v2.vercel.app/api/products/${id}`)
         dispatch({
             type: ADD_TO_CART_SUCCESS,
             payload:{
