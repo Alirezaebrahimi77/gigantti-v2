@@ -51,7 +51,7 @@ function CartSlider({showCart, setShowCart, cartItems}) {
             </div>
             <div className="flex justify-center items-center">
               <button className="w-72 py-3 text-white font-bold text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl">
-                Lisää ostoskoriin
+                Siirry kassalle
               </button>
             </div>
           </div>
