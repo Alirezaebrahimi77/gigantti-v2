@@ -32,12 +32,8 @@ const footerData = [
 ]
 
 function Footer() {
-    const [showMenu, setShowMenu] = useState(false)
-    const MenuHandler = () => {
-        setShowMenu(prevState => !prevState)
-    }
   return (
-    <footer className='bg-giganttiFooterBlue w-full pt-16 relative z-50'>
+    <footer className='bg-giganttiFooterBlue w-full pt-16 relative'>
         <div className='bg-[#1A276C] w-full flex p-12 justify-between 2xl:px-60 lg:px-20 flex-wrap flex-col md:flex-row'>
             {footerData && footerData.map(item => (
                 <SingleFooterItem key={item.id} item={item}/>
@@ -48,29 +44,29 @@ function Footer() {
             {/* Logo place */}
             <div className='flex flex-row md:flex-col w-full md:w-[30%] md:[40%] md:mr-10 items-end md:items-start justify-center'>
                 <div className='relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] hidden md:block'>
-                    <Link href="/">
-                        <a>
+                    
+                       
                         <Image
                         src="/footerLogo.svg"
                         alt="Gigantti logo"
                         layout="fill"
                         objectFit="contain"
                         />
-                        </a>
-                    </Link>
+                      
+                    
 
                 </div>
                 <div className='relative w-[60px] h-[60px] md:hidden mr-5 md:mr-0'>
-                    <Link href="/">
-                        <a>
+                    
+                     
                         <Image
                         src="/footerMiniLogo.svg"
                         alt="Gigantti Mini logo"
                         layout="fill"
                         objectFit="contain"
                         />
-                        </a>
-                    </Link>
+                       
+                    
 
                 </div>
                 <div className='flex flex-col justify-center'>
@@ -89,8 +85,8 @@ function Footer() {
 
             </div>
 
-            <FooterMenus showMenu={showMenu} MenuHandler={MenuHandler}/>
-            <FooterMenus showMenu={showMenu} MenuHandler={MenuHandler}/>
+            <FooterMenus />
+            <FooterMenus />
 
 
 
@@ -120,14 +116,13 @@ const SingleFooterItem = ({item}) => {
     )
 }
 
-const FooterMenus = ({header, menus, showMenu, MenuHandler}) => {
+const FooterMenus = ({header, menus}) => {
     return (
         <div className='text-white md:mr-10'>
-            <div className='text-2xl font-customBodyTextDemiBold flex justify-between items-center' onClick={MenuHandler}>
+            <div className='text-2xl font-customBodyTextDemiBold flex justify-between items-center'>
                 <h3>Asiakaspalvelu</h3>
-                <AddIcon  className='block md:hidden cursor-pointer'/>
             </div>
-            <div className={`grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-5 mt-5 text-xs lg:text-sm font-customOpenSansRegular gap-y-2 mb-5 md:mb-0 relative z-0 h-full opacity-100 md:h-full md:opacity-100 transition duration-300 ${showMenu && 'h-full opacity-100'}`}>
+            <div className={`grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-5 mt-5 text-xs lg:text-sm font-customOpenSansRegular gap-y-2 mb-5 md:mb-0 relative z-0 h-full opacity-100 md:h-full md:opacity-100 transition duration-300 `}>
                 <Link href="/"><a className='cursor-pointer'>Asiakaspalvelu</a></Link>
                 <Link href="/"><a className='cursor-pointer'>Ota yhteyttä</a></Link>
                 <Link href="/"><a className='cursor-pointer'>Usein kysyttyä</a></Link>

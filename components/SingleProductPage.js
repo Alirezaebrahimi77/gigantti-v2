@@ -13,15 +13,17 @@ import { useDispatch } from "react-redux";
 
 function SingleProductPage({ req, product }) {
   const [orderType, setOrderType] = useState("net");
+  const [originState, setOriginState] = useState("");
   const router = useRouter();
   const dispatch = useDispatch();
 
   useEffect(() => {
     const { origin } = absoluteUrl(req);
-  }, []);
+    setOriginState(origin)
+  }, [originState]);
 
-  const handleCart = (id) => {
-    dispatch(addToCart(id));
+  const handleCart = (id, origin) => {
+    dispatch(addToCart(id, origin));
     router.push(`${origin + router.asPath}/extra`);
   };
 
@@ -68,19 +70,20 @@ function SingleProductPage({ req, product }) {
             {/* Image section */}
             <div className="w-full flex justify-center mb-10 h-[70%]">
 
-              <div className="relative w-[700px] h-[700px]">
+              <div className="relative w-[700px] h-[300px] xl:h-[500px]">
                 {Object.keys(product).length > 0 && product.images.map(image => (
                   <Image key={image._id} src={image.url} alt="Bosch" className="w-full h-auto object-contain" layout="fill"/>
-                  
+            
                 ))}
               </div>
 
     
             </div>
 
-            {/* Price section */}
+            {/* Price section in mobile*/}
             <PriceComponent
               handleCart={handleCart}
+              origin={originState.length !== 0 && originState}
               orderType={orderType}
               setOrderType={setOrderType}
               product_id={product?._id}
@@ -120,9 +123,10 @@ function SingleProductPage({ req, product }) {
             </div>
           </div>
 
-          {/* Price section */}
+          {/* Price section in desktop*/}
           <PriceComponent
             handleCart={handleCart}
+            origin={originState.length !== 0 && originState}
             orderType={orderType}
             setOrderType={setOrderType}
             product_id={product?._id}
@@ -147,6 +151,7 @@ const PriceComponent = ({
   normalPrice,
   savePrice,
   product_id,
+  origin,
   ...className
 }) => {
   return (
@@ -199,7 +204,7 @@ const PriceComponent = ({
             </div>
             <div className="flex justify-center items-center mt-10">
               <button
-                onClick={() => handleCart(product_id)}
+                onClick={() => handleCart(product_id, origin)}
                 className="w-72 py-3 text-white font-bold text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl"
               >
                 Lisää ostoskoriin
@@ -224,7 +229,7 @@ const PriceComponent = ({
               </div>
 
               <button
-                onClick={() => handleCart(product_id)}
+                onClick={() => handleCart(product_id, origin)}
                 className="w-72 py-3 text-white font-bold  text-lg bg-giganttiCartBgLeft hover:bg-giganttiCartBgRight rounded-3xl"
               >
                 Lisää ostoskoriin

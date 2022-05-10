@@ -4,8 +4,8 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 function CartSlider({showCart, setShowCart, cartItems}) {
   return (
-    <div className={`w-full h-full absolute top-0 right-0 z-50 translate-x-full ${ showCart && "translate-x-0 cartSliderBg"} transition duration-50 flex justify-end`}>
-    <div className="w-full md:w-[50%] lg:w-[40%] xl:w-[28%] shadow-xl bg-white tansition duration-500 py-10 px-8 flex flex-col">
+    <div className={`w-full h-[100vh] absolute top-0 right-0 z-50 translate-x-full ${ showCart && "translate-x-0 cartSliderBg"} transition duration-50 flex justify-end`}>
+    <div className="w-full h-full md:w-[50%] lg:w-[40%] xl:w-[28%] shadow-xl bg-white tansition duration-500 py-10 px-8 flex flex-col">
       <div className="flex justify-between border-b border-gray-200 pb-10">
         <div>
           {cartItems.length > 0 ? (

@@ -9,7 +9,7 @@ function Layout({ children }) {
   const { cartItems } = useSelector((state) => state.cart);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full overflow-clip">
       <Head>
         <title>Gigantti v2</title>
         <meta
