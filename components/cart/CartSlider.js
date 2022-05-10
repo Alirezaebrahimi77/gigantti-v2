@@ -7,7 +7,7 @@ function CartSlider({showCart, setShowCart, cartItems}) {
     <div className={`w-full h-[100vh] absolute top-0 right-0 z-50 translate-x-full ${ showCart && "translate-x-0 cartSliderBg"} transition duration-50 flex justify-end`}>
     <div className="w-full h-full md:w-[50%] lg:w-[40%] xl:w-[28%] shadow-xl bg-white tansition duration-500 py-10 px-8 flex flex-col">
       <div className="flex justify-between border-b border-gray-200 pb-10">
-        <div>
+        <div className='flex flex-row items-center'>
           {cartItems.length > 0 ? (
             <React.Fragment>
               <h3 className="text-[1.8rem] font-bold">
@@ -18,7 +18,6 @@ function CartSlider({showCart, setShowCart, cartItems}) {
                 )}{" "}
                 tuotetta)
               </h3>
-              <p className="text-md text-gray-500">ID: 1005753555</p>
             </React.Fragment>
           ) : (
             <h3 className="text-[1.8rem] font-bold">
@@ -27,7 +26,7 @@ function CartSlider({showCart, setShowCart, cartItems}) {
           )}
         </div>
         <CloseRoundedIcon
-          className="text-3xl text-gray-500 mt-1 cursor-pointer"
+          className="text-4xl text-gray-500 mt-1 cursor-pointer"
           onClick={() => setShowCart(false)}
         />
       </div>
