@@ -96,12 +96,12 @@ const SingleProductItem = ({product}) => {
         </div>
 
         {/* Image  */}
-        <div className="relative h-[240px] w-[100%] p-10 flex items-center justify-center xl:group-hover:h-[180px] xl:group-hover:w-[100%] xl:group-hover:p-16 transition-all duration-150">
+        <div className="relative h-[240px] w-[100%] p-16 flex items-center justify-center xl:group-hover:h-[180px] xl:group-hover:w-[100%] xl:group-hover:p-200 transition-all duration-150">
           <Image
-            src={iRobot}
+            src={product.images[0].url}
             alt={product.name}
             objectFit="contain"
-            className="object-contain w-full h-full"
+            layout="fill"
           />
         </div>
 

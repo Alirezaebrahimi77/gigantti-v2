@@ -24,7 +24,7 @@ const SingleCartItem = ({ cartItem}) => {
       <div className="flex items-center py-4 border-b border-gray-300">
         <div className="relative w-[20%] p-3 flex justify-center items-center">
           <Image
-            src={Imuri}
+            src={cartItem?.images[0].url}
             alt="Cart product"
             width={100}
             height={100}
@@ -50,6 +50,7 @@ const SingleCartItem = ({ cartItem}) => {
               className="outline-0 font-bold text-center w-full"
               min={1}
               value={cartItem.quantity}
+              readOnly
             />
           </div>
           <div onClick={() => incrementHandler(cartItem.id)} className="flex justify-center items-center w-[24px] h-[24px] rounded-full border border-gray-300 cursor-pointer hover:border-black">

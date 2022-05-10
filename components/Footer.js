@@ -49,23 +49,27 @@ function Footer() {
             <div className='flex flex-row md:flex-col w-full md:w-[30%] md:[40%] md:mr-10 items-end md:items-start justify-center'>
                 <div className='relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] hidden md:block'>
                     <Link href="/">
+                        <a>
                         <Image
                         src="/footerLogo.svg"
                         alt="Gigantti logo"
                         layout="fill"
                         objectFit="contain"
                         />
+                        </a>
                     </Link>
 
                 </div>
                 <div className='relative w-[60px] h-[60px] md:hidden mr-5 md:mr-0'>
                     <Link href="/">
+                        <a>
                         <Image
                         src="/footerMiniLogo.svg"
                         alt="Gigantti Mini logo"
                         layout="fill"
                         objectFit="contain"
                         />
+                        </a>
                     </Link>
 
                 </div>
@@ -74,9 +78,9 @@ function Footer() {
                         <p className='text-gray-500 break-normal text-sm md:text-md'>©2022 Gigantti Oy | Sanomatalo, Töölönlahdenkatu 2, 00100 Helsinki | Kaikki oikeudet pidätetään.</p>
                     </div>
                     <div className='flex space-x-4 text-white mt-2 text-sm lg:text-md'>
-                        <Link href="/"><p className="underline text-white hover:no-underline cursor-pointer">Ostoehdot</p></Link>
-                        <Link href="/"><p className="underline text-white hover:no-underline cursor-pointer">Tuoteryhmät</p></Link>
-                        <Link href="/"><p className="underline text-white hover:no-underline cursor-pointer">Tuotemerkit</p></Link>
+                        <Link href="/"><a className="underline text-white hover:no-underline cursor-pointer">Ostoehdot</a></Link>
+                        <Link href="/"><a className="underline text-white hover:no-underline cursor-pointer">Tuoteryhmät</a></Link>
+                        <Link href="/"><a className="underline text-white hover:no-underline cursor-pointer">Tuotemerkit</a></Link>
 
                     </div>
 
@@ -124,13 +128,13 @@ const FooterMenus = ({header, menus, showMenu, MenuHandler}) => {
                 <AddIcon  className='block md:hidden cursor-pointer'/>
             </div>
             <div className={`grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-5 mt-5 text-xs lg:text-sm font-customOpenSansRegular gap-y-2 mb-5 md:mb-0 relative z-0 h-full opacity-100 md:h-full md:opacity-100 transition duration-300 ${showMenu && 'h-full opacity-100'}`}>
-                <Link href="/"><p className='cursor-pointer'>Asiakaspalvelu</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Ota yhteyttä</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Usein kysyttyä</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Kaikkeen löytyy ratkaisu – <br/> Artikkeleita ja inspiraatiota</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Maksutavat</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Myymälät</p></Link>
-                <Link href="/"><p className='cursor-pointer'>Näin aloitat yritysasiakkuuden</p></Link>
+                <Link href="/"><a className='cursor-pointer'>Asiakaspalvelu</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Ota yhteyttä</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Usein kysyttyä</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Kaikkeen löytyy ratkaisu – <br/> Artikkeleita ja inspiraatiota</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Maksutavat</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Myymälät</a></Link>
+                <Link href="/"><a className='cursor-pointer'>Näin aloitat yritysasiakkuuden</a></Link>
             </div>
         </div>
 

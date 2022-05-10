@@ -36,20 +36,20 @@ function Header({showCart, setShowCart}) {
       )}
 
       <div className="hidden w-full xl:flex xl:space-x-4 xl:py-2 xl:pl-12">
-        <Link href="/asiakaspalvelu">
-          <p className="text-gray-400 cursor-pointer hover:underline">
+        <Link href="/">
+          <a className="text-gray-400 cursor-pointer hover:underline">
             Asiakaspalvelu
-          </p>
+          </a>
         </Link>
-        <Link href="/yksityisasiakas">
-          <p className="text-giganttiCategoryText cursor-pointer">
+        <Link href="/">
+          <a className="text-giganttiCategoryText cursor-pointer">
             Yksityisasiakas
-          </p>
+          </a>
         </Link>
-        <Link href="yritysasiakas">
-          <p className="text-gray-400 cursor-pointer hover:underline">
+        <Link href="/">
+          <a className="text-gray-400 cursor-pointer hover:underline">
             Yritysasiakas
-          </p>
+          </a>
         </Link>
       </div>
       <div className="relative flex items-center border border-t-gray-300 border-b-gray-300 h-[72px] xl:h-[100px] xl:pl-6">
@@ -57,12 +57,14 @@ function Header({showCart, setShowCart}) {
           <div className="flex items-center flex-row-reverse xl:flex-row mr-4">
             <div className="relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] transition duration-150 hover:scale-105 cursor-pointer">
               <Link href="/">
+                <a>
                 <Image
                   src="/gigantti_logo.svg"
                   alt="Gigantti logo"
                   layout="fill"
                   objectFit="contain"
                 />
+                </a>
               </Link>
             </div>
             <div className="flex px-4 items-center group cursor-pointer text-giganttiBlue 2xl:mr-20 lg:border-l lg:border-gray-300 2xl:ml-4">

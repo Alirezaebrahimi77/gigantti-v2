@@ -66,10 +66,13 @@ function SingleProductPage({ req, product }) {
           {/* Image section + description */}
           <div className="flex flex-col w-full md:w-[60%] 2xl:w-[80%] px-2 2xl:px-12">
             {/* Image section */}
-            <div className="w-full h-[70%] flex justify-center mb-10">
+            <div className="w-full flex justify-center mb-10 h-[70%]">
 
               <div className="relative w-[700px] h-[700px]">
-                <Image src={bosch} alt="Bosch" className="w-full h-auto object-contain"/>
+                {Object.keys(product).length > 0 && product.images.map(image => (
+                  <Image key={image._id} src={image.url} alt="Bosch" className="w-full h-auto object-contain" layout="fill"/>
+                  
+                ))}
               </div>
 
     
@@ -109,9 +112,9 @@ function SingleProductPage({ req, product }) {
                   ))}
                 </div>
                 <Link href="/product/:id">
-                  <p className="underline cursor-pointer text-gray-700 hover:no-underline">
+                  <a className="underline cursor-pointer text-gray-700 hover:no-underline">
                     Katso tekniset tiedot
-                  </p>
+                  </a>
                 </Link>
               </div>
             </div>
