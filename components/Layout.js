@@ -9,7 +9,7 @@ function Layout({ children }) {
   const { cartItems } = useSelector((state) => state.cart);
 
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-hidden">
       <Head>
         <title>Gigantti v2</title>
         <meta
@@ -20,8 +20,6 @@ function Layout({ children }) {
       </Head>
       <Header showCart={showCart} setShowCart={setShowCart} />
       <CartSlider showCart={showCart} setShowCart={setShowCart} cartItems={cartItems}/>
-
-
       {children}
       <Footer />
     </div>

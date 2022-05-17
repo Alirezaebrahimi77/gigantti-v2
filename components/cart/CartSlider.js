@@ -15,7 +15,7 @@ function CartSlider({showCart, setShowCart, cartItems}) {
                 {cartItems.reduce(
                   (acc, item) => acc + Number(item.quantity),
                   0
-                )}{" "}
+                )}{""}
                 tuotetta)
               </h3>
             </React.Fragment>
