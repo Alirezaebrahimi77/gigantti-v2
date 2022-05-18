@@ -189,8 +189,9 @@ function Header({showCart, setShowCart}) {
       <div className="relative flex items-center border border-t-gray-300 border-b-gray-300 h-[72px] xl:h-[100px] xl:pl-6">
         <div className="flex justify-between items-center w-full py-2 px-2 xl:px-6 z-20">
           <div className="flex items-center xl:flex-row mr-4">
-          
-              <MenuIcon className="block xl:hidden transition duration-150 group-hover:scale-110 text-2xl mr-5 ml-2 cursor-pointer" onClick={mobileMenuHandler}/>
+            <div className="block xl:hidden">
+              <MenuIcon className="transition duration-150 group-hover:scale-110 text-2xl mr-5 ml-2 cursor-pointer" onClick={mobileMenuHandler}/>
+            </div>
             
             <div className="relative w-[120px] h-[70px] md:w-[165px] md:h-[70px] transition duration-150 hover:scale-105 cursor-pointer">
               <Link href="/">
