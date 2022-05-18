@@ -185,7 +185,7 @@ const PriceComponent = ({
             onClick={(e) => setOrderType("pickUp")}
           >
             <p>Nouda</p>
-            <p>myymälässä</p>
+            <p>myymälästä</p>
             <span className="text-sm text-gray-400 mt-1">Ei saatavilla</span>
           </div>
         </div>
